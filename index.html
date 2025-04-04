@@ -779,6 +779,9 @@ border-left-color: #10B981;
 </style>
 </head>
 <body class="bg-white dark:bg-gray-900 min-h-screen">
+<audio autoplay loop id="bgm">
+        <source src="bgm.mp3" type="audio/mpeg">
+      </audio>
 <!-- Loading Screen -->
 <div id="loadingScreen" class="loading-screen">
 <div class="loading-spinner mb-4"></div>
@@ -825,7 +828,7 @@ Note: This is a simulation. Your data will only be stored for this session.
       <!-- Character 1 -->
       <div class="character-card bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden" data-character="eco-warrior">
         <div class="bg-green-100 dark:bg-green-900 p-4 flex justify-center">
-          <img src="https://i.imgur.com/3vYLbyZ.png" alt="Eco-Warrior" class="h-48 object-contain">
+          <div class="text-8xl">🦸‍♂️</div>
         </div>
         <div class="p-5">
           <h3 class="text-xl font-bold text-gray-800 dark:text-gray-200 mb-2">Eco-Warrior</h3>
@@ -840,7 +843,7 @@ Note: This is a simulation. Your data will only be stored for this session.
       <!-- Character 2 -->
       <div class="character-card bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden" data-character="nature-guide">
         <div class="bg-blue-100 dark:bg-blue-900 p-4 flex justify-center">
-          <img src="https://i.imgur.com/JHVZsGD.png" alt="Nature Guide" class="h-48 object-contain">
+          <div class="text-8xl">🧙‍♀️</div>
         </div>
         <div class="p-5">
           <h3 class="text-xl font-bold text-gray-800 dark:text-gray-200 mb-2">Nature Guide</h3>
@@ -855,7 +858,7 @@ Note: This is a simulation. Your data will only be stored for this session.
       <!-- Character 3 -->
       <div class="character-card bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden" data-character="pollution-fighter">
         <div class="bg-purple-100 dark:bg-purple-900 p-4 flex justify-center">
-          <img src="https://i.imgur.com/FZqfA5L.png" alt="Pollution Fighter" class="h-48 object-contain">
+          <div class="text-8xl">🥷</div>
         </div>
         <div class="p-5">
           <h3 class="text-xl font-bold text-gray-800 dark:text-gray-200 mb-2">Pollution Fighter</h3>
@@ -1027,13 +1030,34 @@ Logout
 <div class="bg-white dark:bg-gray-800 p-4 rounded-lg mb-6 shadow-md">
   <h3 class="text-lg font-bold text-gray-800 dark:text-gray-200 mb-3">Our Corporate Partners:</h3>
   <div class="flex flex-wrap justify-center gap-6 items-center">
-    <img src="https://i.imgur.com/nF1Oo5s.png" alt="Starbucks" class="sponsor-logo">
-    <img src="https://i.imgur.com/ZZHPWCS.png" alt="Coca-Cola" class="sponsor-logo">
-    <img src="https://i.imgur.com/WahumHH.png" alt="Tesla" class="sponsor-logo">
-    <img src="https://i.imgur.com/w2IHhFK.png" alt="Adidas" class="sponsor-logo">
-    <img src="https://i.imgur.com/fMvZPXu.png" alt="Nike" class="sponsor-logo">
-    <img src="https://i.imgur.com/1yY3tkH.png" alt="Watsons" class="sponsor-logo">
-    <img src="https://i.imgur.com/76vJfMJ.png" alt="McDonald's" class="sponsor-logo">
+    <div class="flex flex-col items-center">
+      <div class="text-4xl">☕</div>
+      <div class="text-sm mt-1">Starbucks</div>
+    </div>
+    <div class="flex flex-col items-center">
+      <div class="text-4xl">🥤</div>
+      <div class="text-sm mt-1">Coca-Cola</div>
+    </div>
+    <div class="flex flex-col items-center">
+      <div class="text-4xl">🚗</div>
+      <div class="text-sm mt-1">Tesla</div>
+    </div>
+    <div class="flex flex-col items-center">
+      <div class="text-4xl">👟</div>
+      <div class="text-sm mt-1">Adidas</div>
+    </div>
+    <div class="flex flex-col items-center">
+      <div class="text-4xl">👞</div>
+      <div class="text-sm mt-1">Nike</div>
+    </div>
+    <div class="flex flex-col items-center">
+      <div class="text-4xl">💊</div>
+      <div class="text-sm mt-1">Watsons</div>
+    </div>
+    <div class="flex flex-col items-center">
+      <div class="text-4xl">🍔</div>
+      <div class="text-sm mt-1">McDonald's</div>
+    </div>
   </div>
 </div>
 
@@ -1194,7 +1218,7 @@ Close
     <!-- Coca-Cola recycling -->
     <div class="recycling-item bg-white dark:bg-gray-700 rounded-lg p-4 shadow-md flex">
       <div class="mr-4 flex-shrink-0">
-        <img src="https://i.imgur.com/ZZHPWCS.png" alt="Coca-Cola" class="w-20 h-20 object-contain">
+        <div class="text-4xl">🥤</div>
       </div>
       <div>
         <h3 class="text-lg font-bold text-gray-800 dark:text-gray-200 mb-1">Coca-Cola Can Recycling</h3>
@@ -1209,7 +1233,7 @@ Close
     <!-- Starbucks recycling -->
     <div class="recycling-item bg-white dark:bg-gray-700 rounded-lg p-4 shadow-md flex">
       <div class="mr-4 flex-shrink-0">
-        <img src="https://i.imgur.com/nF1Oo5s.png" alt="Starbucks" class="w-20 h-20 object-contain">
+        <div class="text-4xl">☕</div>
       </div>
       <div>
         <h3 class="text-lg font-bold text-gray-800 dark:text-gray-200 mb-1">Starbucks Cup Recycling</h3>
@@ -1224,7 +1248,7 @@ Close
     <!-- Watsons recycling -->
     <div class="recycling-item bg-white dark:bg-gray-700 rounded-lg p-4 shadow-md flex">
       <div class="mr-4 flex-shrink-0">
-        <img src="https://i.imgur.com/1yY3tkH.png" alt="Watsons" class="w-20 h-20 object-contain">
+        <div class="text-4xl">💊</div>
       </div>
       <div>
         <h3 class="text-lg font-bold text-gray-800 dark:text-gray-200 mb-1">Watsons Packaging Recycling</h3>
@@ -1239,7 +1263,7 @@ Close
     <!-- McDonald's recycling -->
     <div class="recycling-item bg-white dark:bg-gray-700 rounded-lg p-4 shadow-md flex">
       <div class="mr-4 flex-shrink-0">
-        <img src="https://i.imgur.com/76vJfMJ.png" alt="McDonald's" class="w-20 h-20 object-contain">
+        <div class="text-4xl">🍔</div>
       </div>
       <div>
         <h3 class="text-lg font-bold text-gray-800 dark:text-gray-200 mb-1">McDonald's Packaging Recycling</h3>
@@ -1392,7 +1416,7 @@ This calculator provides estimates based on available data. Actual carbon footpr
 (Uses: <span class="item-uses" data-id="airFilter">3</span>)
 </span>
 </div>
-<button class="shop-buy-btn w-full bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg transform transition-all" data-id="airFilter" data-cost="750" data-emission="50" data-power="time" data-power-value="10" data-uses="3">
+<button class="shop-buy-btn w-full bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg transform transition-all" data-id="airFilter" data-cost="750" data-emission="50" data-power="time" data-powervalue="10" data-uses="3">
 Purchase
 </button>
 </div>
@@ -1414,7 +1438,7 @@ Purchase
 (Uses: <span class="item-uses" data-id="solarPanel">2</span>)
 </span>
 </div>
-<button class="shop-buy-btn w-full bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg transform transition-all" data-id="solarPanel" data-cost="1200" data-emission="100" data-power="points" data-power-value="2" data-uses="2">
+<button class="shop-buy-btn w-full bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg transform transition-all" data-id="solarPanel" data-cost="1200" data-emission="100" data-power="points" data-powervalue="2" data-uses="2">
 Purchase
 </button>
 </div>
@@ -1436,7 +1460,7 @@ Purchase
 (Uses: <span class="item-uses" data-id="urbanGarden">1</span>)
 </span>
 </div>
-<button class="shop-buy-btn w-full bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg transform transition-all" data-id="urbanGarden" data-cost="500" data-emission="30" data-power="boost" data-power-value="20" data-uses="1">
+<button class="shop-buy-btn w-full bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg transform transition-all" data-id="urbanGarden" data-cost="500" data-emission="30" data-power="boost" data-powervalue="20" data-uses="1">
 Purchase
 </button>
 </div>
@@ -1458,7 +1482,7 @@ Purchase
 (Uses: <span class="item-uses" data-id="recyclingStation">4</span>)
 </span>
 </div>
-<button class="shop-buy-btn w-full bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg transform transition-all" data-id="recyclingStation" data-cost="800" data-emission="60" data-power="mistakes" data-power-value="3" data-uses="4">
+<button class="shop-buy-btn w-full bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg transform transition-all" data-id="recyclingStation" data-cost="800" data-emission="60" data-power="mistakes" data-powervalue="3" data-uses="4">
 Purchase
 </button>
 </div>
@@ -1480,7 +1504,7 @@ Purchase
 (Uses: <span class="item-uses" data-id="bikeSharing">5</span>)
 </span>
 </div>
-<button class="shop-buy-btn w-full bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg transform transition-all" data-id="bikeSharing" data-cost="900" data-emission="80" data-power="speed" data-power-value="50" data-uses="5">
+<button class="shop-buy-btn w-full bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg transform transition-all" data-id="bikeSharing" data-cost="900" data-emission="80" data-power="speed" data-powervalue="50" data-uses="5">
 Purchase
 </button>
 </div>
@@ -1502,7 +1526,7 @@ Purchase
 (Uses: <span class="item-uses" data-id="waterSystem">3</span>)
 </span>
 </div>
-<button class="shop-buy-btn w-full bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg transform transition-all" data-id="waterSystem" data-cost="650" data-emission="40" data-power="hints" data-power-value="1" data-uses="3">
+<button class="shop-buy-btn w-full bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg transform transition-all" data-id="waterSystem" data-cost="650" data-emission="40" data-power="hints" data-powervalue="1" data-uses="3">
 Purchase
 </button>
 </div>
@@ -1513,21 +1537,27 @@ Purchase
 <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
   <!-- Adidas -->
   <div class="gift-card bg-white dark:bg-gray-700 rounded-lg shadow-md overflow-hidden">
-    <img src="https://i.imgur.com/w2IHhFK.png" alt="Adidas" class="h-16 mx-auto mt-4">
+    <div class="h-16 flex items-center justify-center mt-4 text-5xl">👟</div>
     <div class="p-3 text-center">
       <h4 class="font-bold text-gray-800 dark:text-gray-200">Adidas Shoes</h4>
       <p class="text-gray-600 dark:text-gray-400 text-sm">Eco-friendly sports shoes</p>
       <p class="mt-2 text-indigo-600 dark:text-indigo-400 font-bold">$1,500</p>
+      <button class="reward-btn mt-2 bg-indigo-600 hover:bg-indigo-700 text-white text-sm px-3 py-1 rounded-lg transform transition-all" data-id="adidas" data-cost="1500">
+        Redeem
+      </button>
     </div>
   </div>
 
   <!-- Nike -->
   <div class="gift-card bg-white dark:bg-gray-700 rounded-lg shadow-md overflow-hidden">
-    <img src="https://i.imgur.com/fMvZPXu.png" alt="Nike" class="h-16 mx-auto mt-4">
+    <div class="h-16 flex items-center justify-center mt-4 text-5xl">👞</div>
     <div class="p-3 text-center">
       <h4 class="font-bold text-gray-800 dark:text-gray-200">Nike Gear</h4>
       <p class="text-gray-600 dark:text-gray-400 text-sm">Sustainable athletic wear</p>
       <p class="mt-2 text-indigo-600 dark:text-indigo-400 font-bold">$1,200</p>
+      <button class="reward-btn mt-2 bg-indigo-600 hover:bg-indigo-700 text-white text-sm px-3 py-1 rounded-lg transform transition-all" data-id="nike" data-cost="1200">
+        Redeem
+      </button>
     </div>
   </div>
 
@@ -1538,6 +1568,9 @@ Purchase
       <h4 class="font-bold text-gray-800 dark:text-gray-200">Roblox Gift Card</h4>
       <p class="text-gray-600 dark:text-gray-400 text-sm">$25 Roblox credit</p>
       <p class="mt-2 text-indigo-600 dark:text-indigo-400 font-bold">$800</p>
+      <button class="reward-btn mt-2 bg-indigo-600 hover:bg-indigo-700 text-white text-sm px-3 py-1 rounded-lg transform transition-all" data-id="roblox" data-cost="800">
+        Redeem
+      </button>
     </div>
   </div>
 
@@ -1548,6 +1581,9 @@ Purchase
       <h4 class="font-bold text-gray-800 dark:text-gray-200">Apple Gift Card</h4>
       <p class="text-gray-600 dark:text-gray-400 text-sm">$50 Apple credit</p>
       <p class="mt-2 text-indigo-600 dark:text-indigo-400 font-bold">$1,300</p>
+      <button class="reward-btn mt-2 bg-indigo-600 hover:bg-indigo-700 text-white text-sm px-3 py-1 rounded-lg transform transition-all" data-id="apple" data-cost="1300">
+        Redeem
+      </button>
     </div>
   </div>
 
@@ -1558,6 +1594,9 @@ Purchase
       <h4 class="font-bold text-gray-800 dark:text-gray-200">Steam Gift Card</h4>
       <p class="text-gray-600 dark:text-gray-400 text-sm">$20 Steam credit</p>
       <p class="mt-2 text-indigo-600 dark:text-indigo-400 font-bold">$700</p>
+      <button class="reward-btn mt-2 bg-indigo-600 hover:bg-indigo-700 text-white text-sm px-3 py-1 rounded-lg transform transition-all" data-id="steam" data-cost="700">
+        Redeem
+      </button>
     </div>
   </div>
 
@@ -1568,6 +1607,9 @@ Purchase
       <h4 class="font-bold text-gray-800 dark:text-gray-200">Google Play Card</h4>
       <p class="text-gray-600 dark:text-gray-400 text-sm">$15 Google Play credit</p>
       <p class="mt-2 text-indigo-600 dark:text-indigo-400 font-bold">$650</p>
+      <button class="reward-btn mt-2 bg-indigo-600 hover:bg-indigo-700 text-white text-sm px-3 py-1 rounded-lg transform transition-all" data-id="googleplay" data-cost="650">
+        Redeem
+      </button>
     </div>
   </div>
 
@@ -1578,6 +1620,9 @@ Purchase
       <h4 class="font-bold text-gray-800 dark:text-gray-200">Mountain Bike</h4>
       <p class="text-gray-600 dark:text-gray-400 text-sm">Eco-friendly transportation</p>
       <p class="mt-2 text-indigo-600 dark:text-indigo-400 font-bold">$2,500</p>
+      <button class="reward-btn mt-2 bg-indigo-600 hover:bg-indigo-700 text-white text-sm px-3 py-1 rounded-lg transform transition-all" data-id="bike" data-cost="2500">
+        Redeem
+      </button>
     </div>
   </div>
 
@@ -1588,6 +1633,9 @@ Purchase
       <h4 class="font-bold text-gray-800 dark:text-gray-200">Electric Scooter</h4>
       <p class="text-gray-600 dark:text-gray-400 text-sm">Zero-emission transport</p>
       <p class="mt-2 text-indigo-600 dark:text-indigo-400 font-bold">$3,000</p>
+      <button class="reward-btn mt-2 bg-indigo-600 hover:bg-indigo-700 text-white text-sm px-3 py-1 rounded-lg transform transition-all" data-id="scooter" data-cost="3000">
+        Redeem
+      </button>
     </div>
   </div>
 </div>
@@ -1603,6 +1651,7 @@ Save Progress
 </div>
 
 <script>
+    document.getElementById("bgm").volume = 0.1;
 // Check for dark mode preference
 if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
 document.documentElement.classList.add('dark');
@@ -2419,7 +2468,8 @@ powerValue: 1
 }
 },
 activePowerUps: {},
-gameHistory: {} // Track completed games for replay
+gameHistory: {}, // Track completed games for replay
+rewardItems: {} // Track redeemed rewards
 };
 
 // DOM elements
@@ -3092,6 +3142,45 @@ openChat: false
 } catch (error) {
 transportFootprint.innerHTML = `<p class="text-red-600 dark:text-red-400">Error: ${error.message}</p>`;
 }
+});
+
+// Function to handle gift card purchases/redemptions
+document.querySelectorAll('.reward-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const rewardId = btn.dataset.id;
+    const cost = parseInt(btn.dataset.cost);
+
+    if (gameState.balance >= cost) {
+      // Purchase reward item
+      gameState.balance -= cost;
+
+      // Add to redeemed items if tracking them
+      if (!gameState.rewardItems[rewardId]) {
+        gameState.rewardItems[rewardId] = 1;
+      } else {
+        gameState.rewardItems[rewardId]++;
+      }
+
+      // Update UI
+      updateBalance();
+
+      // Show notification
+      notificationSystem.success(`
+        <div class="font-bold">Reward Redeemed!</div>
+        <div>You've successfully redeemed this item.</div>
+      `);
+
+      // Add message to chat
+      addMessage('global', 'EcoSystem', `${userSession.username} just redeemed a ${rewardId.charAt(0).toUpperCase() + rewardId.slice(1)} gift card!`, false);
+      highlightChatTab('global');
+    } else {
+      // Not enough money
+      notificationSystem.error(`
+        <div class="font-bold">Not Enough Money</div>
+        <div>You need $${cost} but have $${gameState.balance}.</div>
+      `);
+    }
+  });
 });
 
 // Shopping carbon calculator
@@ -5774,7 +5863,7 @@ const itemId = btn.dataset.id;
 const cost = parseInt(btn.dataset.cost);
 const emission = parseInt(btn.dataset.emission);
 const powerType = btn.dataset.power;
-const powerValue = parseInt(btn.dataset.power-value);
+const powerValue = parseInt(btn.dataset.powervalue);
 const uses = parseInt(btn.dataset.uses);
 
 if (gameState.balance >= cost && !gameState.shopItems[itemId].purchased) {
@@ -6149,6 +6238,8 @@ messageHeader.className = 'message-header';
 
 const senderElement = document.createElement('div');
 senderElement.className = 'message-sender';
+
+
 
 // Find virtual player color
 if (!isSelf) {
